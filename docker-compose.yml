@@ -1,17 +1,34 @@
 services:
+
+#Service mongoDB
   mongo:
     image: mongo:latest
     container_name: mongo_container
-    ports:
-      - "27017:27017"
     volumes:
       - ./db/mongo_data:/data/db
-      - ./db/init.js:/docker-entrypoint-initdb.d/init.js
+      - ./db/init.js:/docker-entrypoint-initdb.d/init.js:ro
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-    command: mongod --bind_ip_all
+    command: mongod --auth --bind_ip_all
+    networks:
+      - api
 
-volumes:
-  mongo_data:
+  # Service de l'API Node.js
+  api:
+    build: .
+    container_name: node_api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      api:
 
+networks:
+  api:
