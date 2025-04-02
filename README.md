@@ -92,7 +92,7 @@ npm start
 
 #### 1. Clone the Repository :
 ```bash
-git clone https://github.com/Bastien-DA/waf.git
+https://github.com/Manon-Arc/Express-API.git
 ```
 
 #### 2. Navigate to the Project Directory :
