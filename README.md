@@ -71,7 +71,7 @@ This solution provides a web API in JavaScript using Express and MongoDB. The AP
 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Manon-Arc/Express-API.git
+git clone https://github.com/Mizury26/Express-API.git
 ```
 
 #### 2. Navigate to the Project Directory :
@@ -92,7 +92,7 @@ npm start
 
 #### 1. Clone the Repository :
 ```bash
-https://github.com/Manon-Arc/Express-API.git
+git clone https://github.com/Mizury26/Express-API.git
 ```
 
 #### 2. Navigate to the Project Directory :
