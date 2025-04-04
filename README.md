@@ -101,7 +101,7 @@ cd Expresse-API
 ```
 
 #### 3. Configure environments variables  :
-Complete the .env file with your configuration. Attention, you need to add the container name of the mondo database instead of the ip and take care of adding the correct credentials (the same as in the [docker compose](./docker-compose.yml))
+Complete the .env file with your configuration. Attention, you need to add the container name of the mongo database instead of the ip and take care of adding the correct credentials (the same as in the [docker compose](./docker-compose.yml))
 
 #### 3. Build the Docker Image :
 ```bash
